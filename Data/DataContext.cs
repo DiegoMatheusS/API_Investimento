@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
 using API_Investimento.Models;
 using API_Investimento.Utils;
+using Investimento.Models.Enuns;
 
 namespace Investimento.Data
 {
@@ -33,13 +34,13 @@ namespace Investimento.Data
 
              modelBuilder.Entity<Moeda>().HasData
             (
-                new Moeda() { Id = 1, Name = "BTC", Valor = 65000, Quantidade = 0.0050, DataCompra= DateTime.Now, DataVenda= DateTime.Now, Lucro= 250, Prejuizo=0, Imposto = 25.50 },
-                new Moeda() { Id = 2, Name = "ETH", Valor = 3500, Quantidade= 0.020, DataCompra= DateTime.Now, DataVenda= DateTime.Now, Lucro= 125, Prejuizo=0, Imposto = 25.50},
-                new Moeda() { Id = 3, Name = "SHIB", Valor = 0.00002437, Quantidade = 1123456.20, DataCompra= DateTime.Now, DataVenda= DateTime.Now, Lucro= 30, Prejuizo=0, Imposto = 25.50},
-                new Moeda() { Id = 4, Name = "DOGE", Valor = 0.16, Quantidade= 124353.556, DataCompra= DateTime.Now, DataVenda= DateTime.Now, Lucro= 5, Prejuizo=0, Imposto = 25.50},
-                new Moeda() { Id = 5, Name = "ADA", Valor = 0.4566, Quantidade = 1202.12, DataCompra= DateTime.Now, DataVenda= DateTime.Now, Lucro= 0, Prejuizo=50, Imposto = 25.50},
-                new Moeda() { Id = 6, Name = "BNB", Valor = 500, Quantidade= 54, DataCompra= DateTime.Now, DataVenda= DateTime.Now, Lucro= 12, Prejuizo=0, Imposto = 25.50},
-                new Moeda() { Id = 7, Name = "FLOKI", Valor = 0.00003565, Quantidade= 456543156.12, DataCompra= DateTime.Now, DataVenda= DateTime.Now, Lucro= 50, Prejuizo=0, Imposto = 25.50}
+                new Moeda() { Id = 1, Name = "BTC", Valor = 65000, Quantidade = 0.0050, Data= DateTime.Now, Operacao=OperacaoEnum.Compra, Lucro= 250, Prejuizo=0, Imposto = 25.50 },
+                new Moeda() { Id = 2, Name = "ETH", Valor = 3500, Quantidade= 0.020, Data= DateTime.Now, Operacao=OperacaoEnum.Compra, Lucro= 125, Prejuizo=0, Imposto = 25.50},
+                new Moeda() { Id = 3, Name = "SHIB", Valor = 0.00002437, Quantidade = 1123456.20, Data= DateTime.Now, Operacao=OperacaoEnum.Compra, Lucro= 30, Prejuizo=0, Imposto = 25.50},
+                new Moeda() { Id = 4, Name = "DOGE", Valor = 0.16, Quantidade= 124353.556, Data= DateTime.Now, Operacao=OperacaoEnum.Compra, Lucro= 5, Prejuizo=0, Imposto = 25.50},
+                new Moeda() { Id = 5, Name = "ADA", Valor = 0.4566, Quantidade = 1202.12, Data= DateTime.Now, Operacao=OperacaoEnum.Compra, Lucro= 0, Prejuizo=50, Imposto = 25.50},
+                new Moeda() { Id = 6, Name = "BNB", Valor = 500, Quantidade= 54, Data= DateTime.Now, Operacao=OperacaoEnum.Compra, Lucro= 12, Prejuizo=0, Imposto = 25.50},
+                new Moeda() { Id = 7, Name = "FLOKI", Valor = 0.00003565, Quantidade= 456543156.12, Data= DateTime.Now, Operacao=OperacaoEnum.Compra, Lucro= 50, Prejuizo=0, Imposto = 25.50}
             );
 
             Usuario user = new Usuario();

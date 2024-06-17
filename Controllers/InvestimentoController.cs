@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Investimento.Models;
+using Investimento.Models.Enuns;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +19,7 @@ namespace Investimento.Controllers
         //parte para banco de dados na nuvem
 
         
-        private readonly DataContext _context;
+       private readonly DataContext _context;
 
         public InvestimentoController(DataContext context)
         {
@@ -40,7 +40,7 @@ namespace Investimento.Controllers
                 return BadRequest(ex.Message);
             }
         }
-
+        
 
         [HttpGet("GetAll")]
         public async Task<IActionResult> Get()
@@ -107,6 +107,7 @@ namespace Investimento.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
 
 
       /* private static List<Moeda> TipoInvestimento = new List<Moeda>()
