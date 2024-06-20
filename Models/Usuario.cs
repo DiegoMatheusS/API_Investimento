@@ -18,6 +18,9 @@ namespace API_Investimento.Models
         public double? Longitude { get; set; }
         public DateTime? DataAcesso { get; set; }
 
+         [NotMapped] 
+        public string PasswordString { get; set; } = string.Empty;
+        
         public string Perfil { get; set; } = string.Empty;
         public string Email { get; set; } = string.Empty;
 
