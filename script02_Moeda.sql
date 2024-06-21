@@ -211,4 +211,11 @@ GO
 
 COMMIT;
 GO
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20240620233917_Autenticar', N'8.0.6');
+GO
+
+COMMIT;
+GO
+
 
